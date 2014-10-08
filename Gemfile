@@ -22,7 +22,7 @@ group :test do
   gem 'capybara'
 end
 
-configure :production do
+group :production do
   # Heroku Addon
-  require 'newrelic_rpm'
+  gem 'newrelic_rpm'
 end
