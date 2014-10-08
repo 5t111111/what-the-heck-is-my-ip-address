@@ -1,36 +1,20 @@
 (function() {
-  $("#fetch-config").click(function() {
+  $("#get-info").click(function() {
     var JSONdata, apiUrl, buttonLabel;
-    buttonLabel = $("#fetch-config").html();
-    $("#fetch-config").attr('disabled', true);
-    $("#fetch-config").html("Processing...");
+    buttonLabel = $("#get-info").html();
+    $("#get-info").attr('disabled', true);
+    $("#get-info").html("Processing...");
     apiUrl = $("#api-url").val();
     $("#result-message").children().remove();
-    $("#result-table").children().remove();
+    $("td").remove();
     $.ajax({
       type: "get",
       url: apiUrl,
       success: function(data) {
-        $("#fetch-config").attr('disabled', false);
-        $("#fetch-config").html(buttonLabel);
+        $("#get-info").attr('disabled', false);
+        $("#get-info").html(buttonLabel);
 
 	var table = $("#result-table");
-
-	function createTableHeader(tableObj) {
-	  var tr = $("<tr/>");
-	  var th1 = $("<th/>");
-	  var th2 = $("<th/>");
-          th1.attr('width', "30%");
-	  th1.html("Field");
-	  tr.append(th1);
-          th2.attr('width', "70%");
-	  th2.html("Value");
-	  tr.append(th2);
-	  tableObj.append(tr);
-	  return tableObj;
-	}
-
-	table = createTableHeader(table);
 
         function parseObjectField(obj) {
 	  var s = "";
@@ -73,8 +57,8 @@
         console.log("ERROR: " + errMsg);
         p = $("<p/>").html(errMsg);
         $("#result-message").append(p);
-        $("#fetch-config").attr('disabled', false);
-        $("#fetch-config").html(buttonLabel);
+        $("#get-info").attr('disabled', false);
+        $("#get-info").html(buttonLabel);
       }
     });
   });
