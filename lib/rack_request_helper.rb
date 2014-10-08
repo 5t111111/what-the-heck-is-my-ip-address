@@ -1,4 +1,8 @@
 module RackRequestHelper
+  def remote_host
+    @env["REMOTE_HOST"]
+  end
+
   def accept_language
     parse_http_accept_header(@env["HTTP_ACCEPT_LANGUAGE"])
   end

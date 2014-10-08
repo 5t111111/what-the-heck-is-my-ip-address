@@ -19,7 +19,7 @@ class App < Sinatra::Base
   end
 
   def ip; { ip: request.ip }; end
-  def host; { host: request.host }; end
+  def host; { host: request.remote_host }; end
   def ua; { ua: request.user_agent }; end
   def port; { port: request.port }; end
   def lang; { lang: request.accept_language }; end
@@ -41,7 +41,9 @@ class App < Sinatra::Base
     return jsonp {} unless params['config']
     result = {}
     params['config'].split(',').each do |method_name|
-      result.merge!(send(method_name.strip))
+      field = send(method_name.strip)
+      field ||= {}
+      result.merge!(field)
     end
     jsonp result
   end
