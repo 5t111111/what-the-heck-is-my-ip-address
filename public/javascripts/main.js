@@ -3,7 +3,7 @@
     var JSONdata, apiUrl, buttonLabel;
     buttonLabel = $("#get-info").html();
     $("#get-info").attr('disabled', true);
-    $("#get-info").html("Processing...");
+    $("#get-info").html("Fetching...");
     apiUrl = $("#api-url").val();
     $("#result-message").children().remove();
     $("td").remove();
