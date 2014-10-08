@@ -41,9 +41,9 @@ class App < Sinatra::Base
   end
 
   get '/api' do
-    return jsonp {} unless params['config']
+    return jsonp {} unless params['fields']
     result = {}
-    params['config'].split(',').each do |method_name|
+    params['fields'].split(',').each do |method_name|
       result.merge!(send(method_name.strip) || {})
     end
     jsonp result

@@ -68,10 +68,10 @@
 }).call(this);
 
 function updateApiUrl() {
-  var apiUrl = "/api?config=";
-  var configs = ["ip", "host", "ua", "port", "lang", "connection", "encoding", "mime"];
+  var apiUrl = "/api?fields=";
+  var fields = ["ip", "host", "ua", "port", "lang", "connection", "encoding", "mime"];
 
-  configs.forEach(function(item){
+  fields.forEach(function(item){
    if($("#" + item).prop('checked')) {
      apiUrl += item + ',';
    }
