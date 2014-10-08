@@ -1,6 +1,8 @@
+require 'resolv'
+
 module RackRequestHelper
   def remote_host
-    @env["REMOTE_HOST"]
+    Resolv.new.getname(ip)
   end
 
   def accept_language
