@@ -21,3 +21,6 @@ group :test do
   gem 'rspec'
   gem 'capybara'
 end
+
+# Heroku Addon
+gem 'newrelic_rpm'
