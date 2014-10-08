@@ -10,7 +10,7 @@ html
   body
     #header
       #menu
-        | What The Heck Is My IP Address?
+        = @title
     #wrapper
       h2
         | Your Connection
@@ -52,6 +52,11 @@ html
             th width="30%" Field
             th width="70%" Value
       #result-message
+    #footer
+      p
+        | ©2014 #{@title}  
+      p
+        a href="https://example.com" GitHub
     script src="/javascripts/main.js"
 
 

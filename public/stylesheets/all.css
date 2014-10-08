@@ -400,6 +400,10 @@ input[type="submit"] {
 #wrapper {
   width: 960px;
   margin: auto; }
+  #wrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
   #wrapper #form-content {
     width: 260px;
     margin: 40px 20px 0 20px;
@@ -409,9 +413,8 @@ input[type="submit"] {
     margin: 20px;
     float: right; }
 
-#cli-document:after {
-  content: "";
-  display: table;
-  clear: both; }
+#footer {
+  text-align: center;
+  font-size: 0.8em; }
 
 /*# sourceMappingURL=all.css.map */

@@ -28,7 +28,7 @@ class App < Sinatra::Base
   def mime; { mime: request.accept_mimetypes }; end
 
   get '/' do
-    @title = 'ifconfig-json'
+    @title = 'What The Heck Is My IP Address?'
     slim :index
   end
 
