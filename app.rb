@@ -2,8 +2,8 @@ require 'sinatra'
 require 'sinatra/jsonp'
 require 'sinatra/reloader' if development?
 require 'slim'
+require 'awesome_print' if development?
 require_relative 'lib/rack_request_helper'
-require 'awesome_print'
 
 class App < Sinatra::Base
   configure :development do
