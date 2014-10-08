@@ -3,7 +3,13 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'sinatra-jsonp'
 gem 'slim'
+gem 'sass'
 gem 'unicorn'
+
+# Bourbon, Neat and Bitters
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
 
 group :development do
   gem 'awesome_print'

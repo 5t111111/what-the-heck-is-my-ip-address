@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'sinatra/jsonp'
 require 'sinatra/reloader' if development?
+require 'slim'
+require_relative 'lib/rack_request_helper'
 require 'awesome_print'
 
 class App < Sinatra::Base
@@ -10,28 +12,37 @@ class App < Sinatra::Base
 
   helpers Sinatra::Jsonp
 
-  # Add trailing slash and redirect for URL canonicalization
-  get %r{(/.*[^\/])$} do
-    redirect "#{params[:captures].first}/"
+  # Just ignore undefinded methods
+  def method_missing(method, *_args)
+    puts "Method [#{method}] is not found."
+    {}
   end
 
-  get %r{^/(ip)?/$} do
-    ap request.ip
-    jsonp ip: request.ip
+  def ip; { ip: request.ip }; end
+  def host; { host: request.host }; end
+  def ua; { ua: request.user_agent }; end
+  def port; { port: request.port }; end
+  def lang; { lang: request.accept_language }; end
+  def connection; { connection: request.connection }; end
+  def encoding; { encoding: request.accept_encoding }; end
+  def mime; { mime: request.accept_mimetypes }; end
+
+  get '/' do
+    @title = 'ifconfig-json'
+    slim :index
   end
 
-  get '/host/' do
-    ap request.host
-    jsonp host: request.host
+  get '/ip' do
+    content_type 'text/plain'
+    ip[:ip] + "\n"
   end
 
-  get '/ua/' do
-    ap request.user_agent
-    jsonp ua: request.user_agent
-  end
-
-  get '/port/' do
-    ap request.port
-    jsonp port: request.port
+  get '/api' do
+    return jsonp {} unless params['config']
+    result = {}
+    params['config'].split(',').each do |method_name|
+      result.merge!(send(method_name.strip))
+    end
+    jsonp result
   end
 end
