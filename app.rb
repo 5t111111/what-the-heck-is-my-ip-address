@@ -4,6 +4,9 @@ require 'sinatra/reloader' if development?
 require 'slim'
 require 'awesome_print' if development?
 require_relative 'lib/rack_request_helper'
+configure :production do
+  require 'newrelic_rpm'
+end
 
 class App < Sinatra::Base
   configure :development do
