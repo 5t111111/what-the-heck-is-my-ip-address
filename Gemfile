@@ -19,6 +19,7 @@ end
 
 group :test do
   gem 'rspec'
+  gem 'turnip'
   gem 'capybara'
 end
 
