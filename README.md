@@ -1,6 +1,6 @@
 # What The Heck Is My IP Address?
 
-"What The Heck Is My IP Address?" is a web application lets you know your IP address and other HTTP connection informations.
+"What The Heck Is My IP Address?" is a web application lets you know your IP address and some other HTTP connection information.
 
 http://what-the-heck-is-my-ip-address.herokuapp.com
 
@@ -14,7 +14,7 @@ http://what-the-heck-is-my-ip-address.herokuapp.com/ip
 
 ### Other fields
 
-These fields are available as JSON for the moment.
+Some other information is provided by json format, these fields are available for the moment.
 
 - IP Address (ip)
 - Remote Host(host)
@@ -25,7 +25,7 @@ These fields are available as JSON for the moment.
 - Encoding (encoding)
 - MIME (mime)
 
-You can provide the fields that you want you know as comma separated query paramaters. 
+You can specify the fields you want by appending field names as comma separated query paramaters. 
 
 http://what-the-heck-is-my-ip-address.herokuapp.com/api?fields=ip,host,ua
 
