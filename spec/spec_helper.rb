@@ -16,6 +16,9 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'capybara'
+require 'turnip'
+
+Dir.glob("spec/**/*steps.rb") { |f| load f, true }
 
 # to test Modular Sinatra Application
 APPS = Rack::Builder.parse_file(File.expand_path('../../config.ru', __FILE__))
