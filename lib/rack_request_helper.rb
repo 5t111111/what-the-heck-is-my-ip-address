@@ -2,7 +2,8 @@ require 'resolv'
 
 module RackRequestHelper
   def remote_host
-    Resolv.new.getname(ip)
+    puts Resolv.getname(ip)
+    Resolv.getname(ip)
   end
 
   def accept_language
