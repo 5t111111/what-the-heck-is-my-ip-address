@@ -79,13 +79,13 @@ end
 
 step 'it returns all fields as json' do
   expect(page.text).to eq({
-                            ip: '127.0.0.1',
-                            host: 'localhost',
-                            ua: nil,
-                            port: 80,
-                            lang: [],
-                            connection: nil,
-                            encoding: [],
-                            mime: []
+                             ip: '127.0.0.1',
+                             host: 'localhost',
+                             ua: nil,
+                             port: 80,
+                             lang: [],
+                             connection: nil,
+                             encoding: [],
+                             mime: []
                           }.to_json)
 end
