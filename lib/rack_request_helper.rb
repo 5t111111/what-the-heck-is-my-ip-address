@@ -3,8 +3,8 @@ require 'resolv'
 module RackRequestHelper
   def remote_host
     Resolv.getname(ip)
-    rescue Resolv::ResolvError
-      nil
+  rescue Resolv::ResolvError
+    nil
   end
 
   def accept_language
