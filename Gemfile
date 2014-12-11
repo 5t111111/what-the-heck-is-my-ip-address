@@ -1,5 +1,6 @@
-ruby '2.1.3'
 source 'https://rubygems.org'
+
+ruby '2.1.5'
 
 gem 'sinatra'
 gem 'sinatra-jsonp'
@@ -21,9 +22,4 @@ group :test do
   gem 'rspec'
   gem 'turnip'
   gem 'capybara'
-end
-
-group :production do
-  # Heroku Addon
-  gem 'newrelic_rpm'
 end
