@@ -2,7 +2,7 @@
 
 "What The Heck Is My IP Address?" is a web application lets you know your IP address and some other HTTP connection information.
 
-http://what-the-heck-is-my-ip-address.nilsteps.com
+https://what-the-heck-is-my-ip-address.nilsteps.com
 
 ## API
 
@@ -10,7 +10,7 @@ http://what-the-heck-is-my-ip-address.nilsteps.com
 
 This URL simply returns IP address string.
 
-http://what-the-heck-is-my-ip-address.nilsteps.com/ip
+https://what-the-heck-is-my-ip-address.nilsteps.com/ip
 
 ### Other fields
 
@@ -27,5 +27,5 @@ Some other information is provided by json format, these fields are available fo
 
 You can specify the fields you want by appending field names as comma separated query paramaters. 
 
-http://what-the-heck-is-my-ip-address.nilsteps.com/api?fields=ip,host,ua
+https://what-the-heck-is-my-ip-address.nilsteps.com/api?fields=ip,host,ua
 
