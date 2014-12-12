@@ -30,6 +30,7 @@ module RackRequestHelper
     end
   end
 
+  # for Cloudflare behind proxy
   def cf_connecting_ip
     @env["HTTP_CF_CONNECTING_IP"]
   end
