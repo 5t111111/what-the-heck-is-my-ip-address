@@ -2,7 +2,7 @@ require 'resolv'
 
 module RackRequestHelper
   def remote_host
-    Resolv.getname(ip)
+    Resolv.getname(cf_connecting_ip || ip)
   rescue Resolv::ResolvError
     nil
   end
