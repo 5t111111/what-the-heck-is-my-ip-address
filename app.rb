@@ -28,15 +28,19 @@ class App < Sinatra::Base
   def encoding; { encoding: request.accept_encoding }; end
   def mime; { mime: request.accept_mimetypes }; end
 
+  def debug_print
+    puts "=============== DEBUG ================"
+    ap request
+    puts "=============== DEBUG ================"
+  end
+
   get '/' do
     @title = 'What The Heck Is My IP Address?'
     slim :index
   end
 
   get '/ip' do
-    puts "=============== DEBUG ================"
-    ap request
-    puts "=============== DEBUG ================"
+    debug_print
     content_type 'text/plain'
     ip[:ip] + "\n"
   end
