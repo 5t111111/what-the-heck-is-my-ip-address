@@ -29,6 +29,10 @@ module RackRequestHelper
       [attribute, quality]
     end
   end
+
+  def cf_connecting_ip
+    @env["HTTP_CF_CONNECTING_IP"]
+  end
 end
 
 Rack::Request.send(:include, RackRequestHelper)
