@@ -2,7 +2,8 @@ require 'sinatra'
 require 'sinatra/jsonp'
 require 'sinatra/reloader' if development?
 require 'slim'
-require 'awesome_print' if development?
+#require 'awesome_print' if development?
+require 'awesome_print'
 require_relative 'lib/rack_request_helper'
 
 class App < Sinatra::Base
@@ -33,6 +34,9 @@ class App < Sinatra::Base
   end
 
   get '/ip' do
+    puts "=============== DEBUG ================"
+    ap request
+    puts "=============== DEBUG ================"
     content_type 'text/plain'
     ip[:ip] + "\n"
   end

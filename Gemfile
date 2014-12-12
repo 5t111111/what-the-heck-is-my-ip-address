@@ -14,9 +14,9 @@ gem 'neat'
 gem 'bitters'
 
 group :development do
-  gem 'awesome_print'
   gem 'sinatra-contrib'
 end
+  gem 'awesome_print'
 
 group :test do
   gem 'rspec'
