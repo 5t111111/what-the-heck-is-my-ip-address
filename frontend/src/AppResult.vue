@@ -1,8 +1,8 @@
 <template>
   <div id="app-result">
-    <table>
+    <table class="result__table">
       <tr v-for="row in resultList">
-        <td>{{ row.name }}</td>
+        <td class="result__name">{{ row.name }}</td>
         <td>{{ row.value }}</td>
       </tr>
     </table>
@@ -67,4 +67,24 @@ export default {
 </script>
 
 <style lang="scss">
+#app-result {
+  width: 70%
+}
+
+.result__table {
+  margin: 2em 1.5em 1.5em;
+  padding: 1em 3em 1.4em 1em;
+  width: 100%;
+
+  td {
+    border: 1px solid #dbdbdb;
+    border-width: 0 0 1px;
+    padding: .5em;
+  }
+}
+
+.result__name {
+  font-weight: 500;
+  width: 10em;
+}
 </style>
