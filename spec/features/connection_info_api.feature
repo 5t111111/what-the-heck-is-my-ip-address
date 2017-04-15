@@ -9,7 +9,7 @@ Feature: Connection information API
   Scenario: get IP address as json
     When I hit /api?fields=ip
     Then it returns ip address as json
- 
+
   Scenario: get Remote Host as json
     When I hit /api?fields=host
     Then it returns Remote Host as json

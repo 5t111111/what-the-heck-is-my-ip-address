@@ -1,25 +1,23 @@
 source 'https://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.4.1'
 
+gem 'bitters'
+gem 'bourbon'
+gem 'neat'
+gem 'sass'
 gem 'sinatra'
 gem 'sinatra-jsonp'
 gem 'slim'
-gem 'sass'
 gem 'unicorn'
 
-# Bourbon, Neat and Bitters
-gem 'bourbon'
-gem 'neat'
-gem 'bitters'
-
 group :development do
+  gem 'awesome_print'
   gem 'sinatra-contrib'
 end
-  gem 'awesome_print'
 
 group :test do
+  gem 'capybara'
   gem 'rspec'
   gem 'turnip'
-  gem 'capybara'
 end
