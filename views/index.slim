@@ -1,63 +1,9 @@
 doctype html
 html
   head
-    meta[charset="utf-8"]
-    meta[http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"]
+    meta charset="utf-8"
     title
       = @title
-    link rel="stylesheet" href="/stylesheets/all.css"
-    script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
   body
-    #header
-      #menu
-        = @title
-    #wrapper
-      h2
-        | Your Connection
-      #form-content
-        fieldset
-          p
-            label for="checkboxes"
-              | Select field(s):
-            label#ip-label
-              input.checkbox#ip name="checkboxes" type="checkbox" value="ip" onClick="updateApiUrl()"/
-              | IP Address
-            label#host-label
-              input.checkbox#host name="checkboxes" type="checkbox" value="host" onClick="updateApiUrl()"/
-              | Remote Host
-            label#ua-label
-              input.checkbox#ua name="checkboxes" type="checkbox" value="ua" onClick="updateApiUrl()"/
-              | User Agent
-            label#port-label
-              input.checkbox#port name="checkboxes" type="checkbox" value="port" onClick="updateApiUrl()"/
-              | Port
-            label#lang-label
-              input.checkbox#lang name="checkboxes" type="checkbox" value="lang" onClick="updateApiUrl()"/
-              | Lang
-            label#connection-label
-              input.checkbox#connection name="checkboxes" type="checkbox" value="connection" onClick="updateApiUrl()"/
-              | Connection
-            label#encoding-label
-              input.checkbox#encoding name="checkboxes" type="checkbox" value="encoding" onClick="updateApiUrl()"/
-              | Encoding
-            label#mime-label
-              input.checkbox#mime name="checkboxes" type="checkbox" value="mime" onClick="updateApiUrl()"/
-              | MIME
-            input#api-url type="hidden" name="api-url" value="/api?fields="
-          p
-            button#get-info type="button" Get Info
-      #information
-        table#result-table
-          tr
-            th width="30%" Field
-            th width="70%" Value
-      #result-message
-    #footer
-      p
-        | ©2014 #{@title}  
-      p
-        a href="https://github.com/5t111111/what-the-heck-is-my-ip-address" GitHub
-    script src="/javascripts/main.js"
-
-
-
+    #app
+    script src="/javascripts/build.js"
