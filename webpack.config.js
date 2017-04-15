@@ -2,10 +2,10 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './frontend/src/main.js',
   output: {
-    path: path.resolve(__dirname, '../public/javascripts'),
-    publicPath: '../public/javascripts',
+    path: path.resolve(__dirname, 'public/javascripts'),
+    publicPath: './public/javascripts',
     filename: 'build.js'
   },
   module: {
@@ -62,12 +62,12 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   sourceMap: true,
+    //   compress: {
+    //     warnings: false
+    //   }
+    // }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
