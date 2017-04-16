@@ -21,7 +21,7 @@ export default {
 
 .nav__items {
   display: flex;
-  margin: 0;
+  margin-top: 0;
   padding: 1rem;
   color: #fff;
   list-style: none;

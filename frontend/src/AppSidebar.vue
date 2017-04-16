@@ -22,17 +22,13 @@ export default {
 #app-sidebar {
   background-color: whitesmoke;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  height: 250px;
-  margin: 2em 1.5em 1.5em;
+  height: 16em;
+  margin: 0 1.5em 1.5em;
   padding: 1em 3em 1.4em 1em;
 }
 
 .sidebar__header {
   font-size: 1.2em;
-  margin-bottom: .5em;
-}
-
-label {
   font-weight: 500;
   margin-top: .2em;
 }

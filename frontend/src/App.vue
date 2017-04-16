@@ -46,6 +46,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~normalize.css';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #2c3e50;
@@ -53,14 +55,7 @@ export default {
 
 .main-container {
   display: flex;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-a {
-  color: #42b983;
+  margin-top: 2em;
 }
 
 footer {

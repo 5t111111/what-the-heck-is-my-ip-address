@@ -1,5 +1,5 @@
 <template>
-  <label>
+  <label class="sidebar__item">
     <input type="checkbox" name="checkboxes" v-bind:value="sidebarItem.id" v-on:click="toggleChecked">
     {{ sidebarItem.name }}
   </label>
@@ -18,7 +18,9 @@
 </script>
 
 <style lang="scss">
-label {
+.sidebar__item {
   display: block;
+  font-weight: 500;
+  margin-top: .7em;
 }
 </style>
