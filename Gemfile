@@ -2,18 +2,17 @@ source 'https://rubygems.org'
 
 ruby '2.4.1'
 
-gem 'bitters'
-gem 'bourbon'
-gem 'neat'
+gem 'puma'
+gem 'puma-heroku'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-jsonp'
-gem 'slim'
-gem 'unicorn'
 
 group :development do
   gem 'awesome_print'
+  gem 'pry-byebug'
   gem 'sinatra-contrib'
+  gem 'tapp', git: 'https://github.com/5t111111/tapp.git', branch: 'add-decoration-feature'
 end
 
 group :test do

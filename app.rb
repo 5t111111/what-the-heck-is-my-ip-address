@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/jsonp'
 require 'sinatra/reloader' if development?
-require 'slim'
 require_relative 'lib/rack_request_helper'
 
 class App < Sinatra::Base
@@ -28,7 +27,7 @@ class App < Sinatra::Base
 
   get '/' do
     @title = 'What The Heck Is My IP Address?'
-    slim :index
+    erb :index
   end
 
   get '/ip' do
