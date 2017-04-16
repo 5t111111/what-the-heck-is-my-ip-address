@@ -21,9 +21,10 @@ export default {
 <style lang="scss">
 #app-sidebar {
   background-color: whitesmoke;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  height: 250px;
   margin: 2em 1.5em 1.5em;
   padding: 1em 3em 1.4em 1em;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
 
 .sidebar__header {
