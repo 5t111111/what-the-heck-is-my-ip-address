@@ -72,7 +72,7 @@ export default {
 }
 
 .result__table {
-  margin: 2em 1.5em 1.5em;
+  margin: 0 1.5em 1.5em;
   padding: 1em 3em 1.4em 1em;
   width: 100%;
 
